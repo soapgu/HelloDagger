@@ -9,15 +9,21 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import javax.inject.Inject;
+
 public class LightMaker {
     private SerialPort transport;
     private InputStream inputStream;
     private OutputStream outputStream;
     private boolean opened;
-    private ISwitch lSwitch;
+
+    @Inject
+    ISwitch lSwitch;
 
     public LightMaker() {
-        lSwitch = new RedSwitch();
+        //lSwitch = new RedSwitch();
+        LightComponent component = DaggerLightComponent.create();
+        component.inject(this);
     }
 
     public void on()

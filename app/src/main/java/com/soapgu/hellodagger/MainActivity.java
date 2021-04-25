@@ -1,15 +1,12 @@
 package com.soapgu.hellodagger;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.orhanobut.logger.Logger;
 import com.soapgu.lightlibrary.LightMaker;
-import com.soapgu.lightlibrary.ModuleTest;
-
-import static com.soapgu.lightlibrary.ModuleTest.Hello;
 
 public class MainActivity extends AppCompatActivity {
 
