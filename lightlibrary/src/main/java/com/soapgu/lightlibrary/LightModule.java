@@ -9,4 +9,9 @@ public class LightModule {
     ISwitch provideSwitch(){
         return new RedSwitch();
     }
+
+    @Provides
+    IComm provideComm(){
+        return new SerialPortComm();
+    }
 }
