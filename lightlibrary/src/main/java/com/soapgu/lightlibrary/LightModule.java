@@ -9,14 +9,14 @@ import dagger.multibindings.StringKey;
 public class LightModule {
     @Provides @IntoMap
     @StringKey("red")
-    ISwitch provideRedSwitch(){
-        return new RedSwitch();
+    ISwitchCommand provideRedSwitch(){
+        return new RedSwitchCommand();
     }
 
     @Provides @IntoMap
     @StringKey("yellow")
-    ISwitch provideYellowSwitch(){
-        return new YellowSwitch();
+    ISwitchCommand provideYellowSwitch(){
+        return new YellowSwitchCommand();
     }
 
     @Provides

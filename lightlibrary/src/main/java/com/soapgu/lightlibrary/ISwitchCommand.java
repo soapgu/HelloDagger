@@ -1,6 +1,6 @@
 package com.soapgu.lightlibrary;
 
-public interface ISwitch {
+public interface ISwitchCommand {
     byte[] on();
     byte[] off();
 }

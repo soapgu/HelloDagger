@@ -1,9 +1,9 @@
 package com.soapgu.lightlibrary;
 
-public class RedSwitch implements ISwitch {
+public class YellowSwitchCommand implements ISwitchCommand {
     @Override
     public byte[] on() {
-        return new byte[]{(byte) 0xFF, (byte) 0xAA, (byte) 0x00};
+        return new byte[]{(byte) 0xFF, (byte) 0xAA, (byte) 0x0A};
     }
 
     @Override

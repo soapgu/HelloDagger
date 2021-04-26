@@ -1,13 +1,5 @@
 package com.soapgu.lightlibrary;
 
-import android.serialport.SerialPort;
-
-import com.orhanobut.logger.Logger;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.Map;
 import java.util.Objects;
 
@@ -16,7 +8,7 @@ import javax.inject.Inject;
 public class LightMaker {
 
     @Inject
-    Map<String, ISwitch> lSwitch;
+    Map<String, ISwitchCommand> lSwitch;
     @Inject
     IComm comm;
 
