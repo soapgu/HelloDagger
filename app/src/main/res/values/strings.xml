@@ -2,4 +2,7 @@
     <string name="app_name">HelloDagger</string>
     <string name="on">on</string>
     <string name="off">off</string>
+    <string name="LightSwitch">LightSwitch</string>
+    <string name="offLight">red</string>
+    <string name="onLight">yellow</string>
 </resources>

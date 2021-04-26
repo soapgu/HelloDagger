@@ -15,6 +15,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_light"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/LightSwitch"
+            app:showText="false"
+            android:textOff="@string/offLight"
+            android:textOn="@string/onLight" />
+
         <Button
             android:id="@+id/button_on"
             android:layout_width="wrap_content"

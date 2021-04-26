@@ -8,13 +8,15 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Map;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
 public class LightMaker {
 
     @Inject
-    ISwitch lSwitch;
+    Map<String, ISwitch> lSwitch;
     @Inject
     IComm comm;
 
@@ -24,14 +26,14 @@ public class LightMaker {
         component.inject(this);
     }
 
-    public void on()
+    public void on( String tag )
     {
-        this.comm.send( lSwitch.on() );
+        this.comm.send( Objects.requireNonNull(lSwitch.get(tag)).on() );
     }
 
-    public void off()
+    public void off(String tag)
     {
-        this.comm.send(lSwitch.off());
+        this.comm.send(Objects.requireNonNull(lSwitch.get(tag)).off());
     }
 
     public void open() {
