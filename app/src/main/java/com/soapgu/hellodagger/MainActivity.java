@@ -45,4 +45,10 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         } );
     }
+
+    @Override
+    protected void onDestroy() {
+        lightMaker.close();
+        super.onDestroy();
+    }
 }
